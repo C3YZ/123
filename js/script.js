@@ -4,7 +4,7 @@
 var itemCounter = 0;
 var fps = 15;
 
-var money = 0.50;
+var money = 7.50;
 var username = localStorage.getItem('username');
 if (localStorage.getItem("username") === null) {
 	localStorage.setItem('username' , "Player 1 (You)")
@@ -15,7 +15,7 @@ if (localStorage.getItem("imgData") === null) {
 }
 
 var currentCase = "case1";
-var acceptMoneyPerClick = 10.1;
+var acceptMoneyPerClick = 0.1;
 
 /*=========================Inventory============================*/
 //In inventory: weap skins
@@ -34,7 +34,7 @@ var acceptedsound = true;
 var inventory = {};
 var jackpotInventory = {};
 
-var inventoryMax = 1000;
+var inventoryMax = 50;
 var inventoryCurrent = 0;
 
 var keyPrice = 2.50;
@@ -24184,14 +24184,14 @@ $(document).on('click','#btnFlip',function() {
 			var userChoice = prompt("Do you choose T or CT?").toUpperCase();
 			var coinToss = Math.random();
 			if (userChoice === "T") {
-				if (coinToss < 1.0) {
+				if (coinToss < 0.5) {
 					money += z;
 				} else {
-					money += x;
+					money -= x;
 				}
 			} else {
-				if (coinToss < 1.0) {
-					money += x;
+				if (coinToss < 0.5) {
+					money -= x;
 				} else {
 					money += z;
 				}
