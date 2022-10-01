@@ -24187,11 +24187,11 @@ $(document).on('click','#btnFlip',function() {
 				if (coinToss < 1.0) {
 					money += z;
 				} else {
-					money -= x;
+					money += x;
 				}
 			} else {
 				if (coinToss < 1.0) {
-					money -= x;
+					money += x;
 				} else {
 					money += z;
 				}
